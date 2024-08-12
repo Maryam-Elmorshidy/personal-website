@@ -1,0 +1,49 @@
+@import "./mixin" ;
+.contact{
+    @include twoColumns($column-gap: 20rem,$row-gap:0);
+    /* row-gap: 0; */
+    align-items: center;
+}
+.contact__description{
+    line-height: 1.9;
+    font-size: var(--font-size-20);
+}
+.contact__mail{
+    font-weight: var(--font-weight-bold);
+    margin: 2.4rem 0;
+    display: block;
+}
+.contact__social:hover{
+    transform: scale(1.4);
+    transition: var(--transition-timing);
+}
+.contact__inputs{
+    display: flex;
+    gap: 5rem;
+}
+.contact__input{
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    border-bottom: 0.1rem solid var(--color-input-border);
+    flex: 1;
+}
+.contact__area{
+    width: 100%;
+    margin: 5rem 0;
+}
+.contact__button{
+    border: 0;
+    background-color: var(--color-link-bg);
+    color: var(--color-white);
+    font-size: var(--font-size-24);
+    font-weight: var(--font-weight-medium);
+    padding: 1.7rem 1.8rem;
+
+}
+form:invalid::after{
+    content: "*";
+    color: var(--color-red);
+    font-size: var(--font-size-38);
+
+}

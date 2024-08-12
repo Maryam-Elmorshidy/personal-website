@@ -1,0 +1,85 @@
+/* bio content */
+@import "./mixin";
+.bio{
+    @include twoColumns($column-gap: 7.4rem ,$row-gap:0);
+}
+.bio__heading{
+    font-size: var(--font-size-70);
+    font-weight: var(--font-weight-bold);
+}
+.bio__objective{
+    font-size: var(--font-size-20);
+    font-family: var(--font-family-poppins);
+    font-weight: var(--font-weight-regular);
+    margin: 3rem 0 8rem;
+    line-height: 3rem;
+}
+.bio__name{
+    font-weight: var(--font-weight-semi-bold);
+}
+.bio__github{
+    color: var(--color-brown);
+}
+.bio__linkedin{
+    color: var(--color-dark-blue);
+}
+.bio__kaggle{
+    color: var(--color-light-blue);
+}
+.bio__link{
+    font-size: 2.4rem;
+    font-weight: var(--font-weight-semi-bold);
+    text-decoration: none;
+}
+.bio__link--say-hi{
+    background-color: var(--color-black);
+    color: var(--color-white);
+    padding: 0.7rem 4.7rem;
+}
+.bio__link--progress{
+    /* padding: 07rem 0; */
+    margin-inline-start: 1.4rem;
+}
+@keyframes jump {
+    0%{
+        transform: translateY(0.7rem);
+    }
+    33%{
+        transform: translateY(-0.7rem);
+    }
+    66%{
+        transform: translateY(0.7rem);
+    }
+    100%{
+        transform: translateY(-0.7rem);
+    }
+}
+.bio__arrow{
+    display: inline-block;
+    animation: jump 1s infinite alternate ease-in-out;
+}
+/* end bio content */
+/* bio picture */
+.bio__pic{
+    width: 55rem;
+    
+}
+.bio__pic--content{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bio__pic--content::before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background-color: var(--color-box-img);
+    width: 70%;
+    height: 32rem;
+    border-radius: 1.8rem;
+    box-shadow: 12px 12px 2px 1px rgba(139, 139, 143, 0.2);
+    /* box-shadow: 5.17543px 8.7017px 38.0699 rgba(153, 142, 142, 0.5); */
+}
+/* end bio picture */

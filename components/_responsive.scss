@@ -1,0 +1,87 @@
+@media (max-width: 1000px){
+    html{
+        font-size: 8px;
+    }
+}
+@media (max-width: 800px){
+    .container{
+        row-gap: 8rem;
+    }
+    .section{
+        grid-template-columns: 1fr;
+    }
+    .bio__pic--content{
+        order: -1;
+        justify-self: center;
+        margin-bottom: 6rem;
+    }
+    .skills__list{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .projects__video{
+        margin-bottom: 8rem;
+    }
+    .contact__form{
+        order: -1;
+        margin-bottom: 8rem;
+    }
+    
+}
+@media (max-width: 500px){
+    .bio__pic{
+        width: 100%;
+    }
+    .header{
+        padding: 0;
+    }
+    .header::after{
+        z-index: 0;
+    }
+    .menu__burgur{
+        display: flex;
+        gap: 0.75rem;
+        z-index: 1;
+        flex-direction: column;
+        align-self: center;
+        cursor: pointer;
+
+    }
+    .menu__burgur--bar{
+        height: 0.3rem;
+        width: 4.375rem;
+        background-color: var(--color-text);
+        transition: var(--transition-timing);
+
+    }
+    .header:has(.menu__burgur--checkbox:checked) .menu__burgur--bar:nth-child(1){
+        transform: translateY(10px) rotate(45deg); 
+    }
+    .header:has(.menu__burgur--checkbox:checked) .menu__burgur--bar:nth-child(2){
+        opacity: 0;
+        visibility: hidden;
+    }
+    .header:has(.menu__burgur--checkbox:checked) .menu__burgur--bar:nth-child(3){
+        transform: translateY(-7px) rotate(-45deg); 
+    }
+    .navigation{
+        position: absolute;
+        background-color: var(--color-background);
+        top: 0;
+        width: 100vw;
+        padding: 3rem 0;
+        border-bottom: 0.1 solid var(--color-input-border);
+        z-index: -1;
+        transition: var(--transition-timing);
+    }
+    .toggle{
+        padding: 3rem 0;
+        z-index: 1;
+
+    }
+    .navigation__list{
+        justify-content: center;
+    }
+    .menu__burgur--checkbox:checked + .navigation{
+        top: 100%;
+    }
+}

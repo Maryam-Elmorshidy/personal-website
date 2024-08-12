@@ -1,0 +1,41 @@
+.toggle{
+    display: flex;
+    gap: 1rem;
+    margin-left: auto;
+}
+.toggle_checkbox{
+    display: none;
+}
+.toggle_title{
+    font-size: var(--font-size-18);
+    font-weight: var(--font-weight-medium);
+}
+.toggle_label{
+    position: relative;
+    display: block;
+    background-color: var(--color-black);
+    border-radius: 1.5rem;
+    width: 4.5rem;
+    height: 2.2;
+    cursor: pointer;
+    padding: 0.3rem 0.4rem;
+    transition: 0.3s;
+}
+.toggle_label::after{
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    background-color: var(--color-white);
+    width: 1.6rem;
+    height: 1.6rem;
+    transition: 0.3s;
+
+}
+.toggle_checkbox:checked + .toggle_label{
+    background-color: var(--color-white);
+}
+.toggle_checkbox:checked + .toggle_label::after{
+    background-color: var(--color-green);
+    transform: translateX(2.1rem);
+}

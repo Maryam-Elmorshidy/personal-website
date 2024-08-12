@@ -1,0 +1,16 @@
+.skills__list{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    row-gap: 5rem;
+}
+.space_h2{
+    margin-top: 3rem;
+}
+.skills__list--big{
+    font-size: var(--font-size-38);
+    font-weight: var(--font-weight-semi-bold);
+}
+.skills__list--small{
+    font-size: var(--font-size-20);
+    margin-top: 1rem;
+}
