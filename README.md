@@ -51,6 +51,8 @@ To run this project locally, follow these steps:
 
 You can simply open the index.html file in your preferred web browser to view the website.   
 
+#### To see live : [Personal Website](https://maryam-elmorshidy.github.io/personal-website/)
+
 ## Usage 💻
 
 This website can be used as a template for your own personal portfolio. Feel free to customize the content, design, and structure to suit your needs. You can also deploy it to platforms like GitHub Pages, Netlify, or Vercel for free hosting.
